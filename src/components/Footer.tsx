@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 const links = [
   { label: 'Home',         to: '/' },
+  { label: 'Account',      to: '/profile' },
   { label: 'Prizes',       to: '/prizes' },
   { label: 'Subscribe',    to: '/subscribe' },
   { label: 'Terms',        to: '/terms' },
