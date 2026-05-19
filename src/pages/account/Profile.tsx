@@ -76,7 +76,7 @@ export default function Profile() {
               name="firstName"
               value={form.firstName}
               onChange={handleChange}
-              placeholder="Marcus"
+              placeholder="First name"
               className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-utd-red transition"
             />
           </div>
@@ -89,7 +89,7 @@ export default function Profile() {
               name="lastName"
               value={form.lastName}
               onChange={handleChange}
-              placeholder="Rashford"
+              placeholder="Last name"
               className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-utd-red transition"
             />
           </div>
