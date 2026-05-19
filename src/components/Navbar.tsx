@@ -10,9 +10,16 @@ export default function Navbar() {
 
         {/* Gold accent bar + logo */}
         <div className="w-1 h-6 bg-utd-gold rounded-full shrink-0" />
-        <Link to="/" className="text-white font-medium text-sm tracking-wide mr-auto">
-          Manchester United Prize Draw
-        </Link>
+        <Link to="/" className="mr-auto flex items-center gap-3">
+  <img
+    src="/images/man-utd-logo.svg"
+    alt="Manchester United"
+    className="h-9 w-9"
+  />
+  <span className="text-white font-medium text-sm tracking-wide hidden sm:block">
+    Manchester United Prize Draw
+  </span>
+</Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-5">
