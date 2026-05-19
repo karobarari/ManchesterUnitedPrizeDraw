@@ -16,8 +16,8 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-5">
-          {['/', '/prizes', '/subscribe', '/about', '/login'].map((path, i) => {
-            const labels = ['Home', 'Prizes', 'Subscribe', 'About', 'Login']
+          {['/', '/login', '/profile', '/prizes', '/subscribe',  '/about'].map((path, i) => {
+            const labels = ['HOME','LOGIN', 'ACCOUNT', 'PRIZES', 'SUBSCRIBE',  'ABOUT']
             return (
               <NavLink
                 key={path}
@@ -60,7 +60,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-utd-red border-t border-white/10 px-4 py-3 flex flex-col gap-3">
-          {[['/', 'Home'], ['/prizes', 'Prizes'], ['/subscribe', 'Subscribe'], ['/about', 'About'], ['/login', 'Login']].map(
+          {[['/', 'Home'], ['/login', 'Login'], ['/profile', 'Account'], ['/prizes', 'Prizes'], ['/subscribe', 'Subscribe'],  ['/about', 'About']].map(
             ([path, label]) => (
               <NavLink
                 key={path}
