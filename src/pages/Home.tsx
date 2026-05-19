@@ -274,16 +274,8 @@ export default function Home() {
   backgroundPosition: 'center',
 }}
       >
-        {/* Particles sit behind everything */}
         <ParticleBackground />
-
-        {/* Content sits above pa rticles */}
         <div className="relative z-10">
-          <FadeIn delay={0}>
-            <p className="rounded-md text-utd-gold bg-red-600/60 inline-block px-4 py-2 max-w-sm text-xl uppercase tracking-widest">
-              Manchester United Foundation
-            </p>
-          </FadeIn>
           <FadeIn delay={0.1}>
   <h1 className="text-4xl sm:text-5xl m-5 font-medium mb-4">
     <Typewriter
