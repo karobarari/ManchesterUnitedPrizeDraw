@@ -1,4 +1,4 @@
-# Man Utd Prize Draw
+# Manchester United Prize Draw
 
 A React + TypeScript homepage for a Manchester United Foundation prize draw site. Built with Vite, Tailwind CSS, and a suite of visual effect libraries to create a premium, branded experience.
 
