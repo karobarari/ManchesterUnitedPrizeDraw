@@ -207,7 +207,7 @@ function ImageSlider() {
           className="absolute inset-0"
         >
           <img src={slides[current].image} alt={slides[current].caption} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-l from-white/50 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-black/20 via-black/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 md:p-10 max-w-7xl mx-auto">
             <div className="h-0.5 w-10 sm:w-12 bg-utd-red mb-3 sm:mb-4" />
             <h2 className={`${DISPLAY} text-white text-2xl sm:text-3xl md:text-5xl leading-none max-w-lg`}>
@@ -374,7 +374,7 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-black/30 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         <ParticleBackground />
 
