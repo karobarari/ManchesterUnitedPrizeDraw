@@ -365,7 +365,7 @@ export default function Home() {
   return (
     <div className="bg-white text-gray-900 font-[Inter] min-h-screen overflow-x-hidden">
 
-      {/* ─── HERO (dark) ──────────────────────────────────────────────────── */}
+      {/* ─── HERO (dark) ─────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden min-h-[88vh] flex items-center"
         style={{
