@@ -323,7 +323,7 @@ function SubscribeSection() {
         {/* Promo video */}
         <div className="mt-8 sm:mt-12 overflow-hidden border border-gray-200 shadow-sm">
           <video className="w-full" controls poster="/images/hero-bg.jpg">
-            <source src="../../../public/video/promo.mp4" type="video/mp4" />
+            <source src="/video/promo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
