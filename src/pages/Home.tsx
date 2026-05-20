@@ -364,7 +364,6 @@ export default function Home() {
 
   return (
     <div className="bg-white text-gray-900 font-[Inter] min-h-screen overflow-x-hidden">
-
       {/* ─── HERO (dark) ─────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden min-h-[88vh] flex items-center"
@@ -387,8 +386,11 @@ export default function Home() {
                 <span className="h-px w-6 sm:w-8 bg-utd-gold" />
                 Official Prize Draw
               </p>
-              <h1 className={`${DISPLAY} text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.9] mb-4`}>
-                Win<br />
+              <h1
+                className={`${DISPLAY} text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.9] mb-4`}
+              >
+                Win
+                <br />
                 <span className="text-utd-red">Big.</span> Give Bigger.
               </h1>
               <div className="text-white/80 text-base sm:text-lg md:text-xl font-light mb-8 sm:mb-10 min-h-[2rem] max-w-lg">
@@ -400,14 +402,19 @@ export default function Home() {
                       'Win a signed Højlund shirt.',
                       'Win a squad signed shirt.',
                     ],
-                    autoStart: true, loop: true, delay: 50, deleteSpeed: 30,
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    deleteSpeed: 30,
                   }}
                 />
               </div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="text-white/60 text-[10px] uppercase tracking-[0.3em] mb-3">Next draw closes in</p>
+              <p className="text-white/60 text-[10px] uppercase tracking-[0.3em] mb-3">
+                Next draw closes in
+              </p>
               <div className="flex gap-2 sm:gap-3 md:gap-5 mb-8 sm:mb-10 max-w-md">
                 <CountdownBlock value={timeLeft.days} label="Days" />
                 <CountdownBlock value={timeLeft.hours} label="Hours" />
@@ -450,8 +457,13 @@ export default function Home() {
       <div className="bg-gray-900 border-b border-white/10 py-8 sm:py-10 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between gap-x-6 gap-y-6">
           {clubStats.map((s, i) => (
-            <div key={i} className="flex flex-col items-center text-center min-w-[80px] sm:min-w-0">
-              <span className={`${DISPLAY} text-utd-red text-3xl sm:text-4xl leading-none`}>
+            <div
+              key={i}
+              className="flex flex-col items-center text-center min-w-[80px] sm:min-w-0"
+            >
+              <span
+                className={`${DISPLAY} text-utd-red text-3xl sm:text-4xl leading-none`}
+              >
                 {s.value}
               </span>
               <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] mt-2 max-w-[110px] leading-tight">
@@ -468,8 +480,12 @@ export default function Home() {
           <FadeIn>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-12 pb-6 border-b border-gray-200">
               <div>
-                <p className="text-utd-red text-[10px] sm:text-[11px] uppercase tracking-[0.3em] mb-3 font-semibold">Win prizes</p>
-                <h2 className={`${DISPLAY} text-gray-900 text-3xl sm:text-4xl md:text-5xl leading-none`}>
+                <p className="text-utd-red text-[10px] sm:text-[11px] uppercase tracking-[0.3em] mb-3 font-semibold">
+                  Win prizes
+                </p>
+                <h2
+                  className={`${DISPLAY} text-gray-900 text-3xl sm:text-4xl md:text-5xl leading-none`}
+                >
                   In the <span className="text-utd-red">next draw</span>
                 </h2>
               </div>
@@ -490,49 +506,17 @@ export default function Home() {
           <FadeIn>
             <p className="text-center text-gray-500 text-xs mt-8 sm:mt-10">
               For full details of the prizes, please see our{' '}
-              <Link to="/prizes" className="text-utd-red hover:underline underline-offset-2 font-semibold">
+              <Link
+                to="/prizes"
+                className="text-utd-red hover:underline underline-offset-2 font-semibold"
+              >
                 Prize Terms & Conditions
-              </Link>.
+              </Link>
+              .
             </p>
           </FadeIn>
         </div>
       </section>
-
-      {/* ─── Rashford quote (dark image) ──────────────────────────────────── */}
-      <section className="relative overflow-hidden border-t-2 border-utd-red min-h-[380px] sm:min-h-[440px] md:min-h-[480px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/rashford.jpg)' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40 sm:to-transparent" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 flex items-center min-h-[380px] sm:min-h-[440px] md:min-h-[480px]">
-          <FadeIn direction="left">
-            <div className="max-w-xl">
-              <span className="text-utd-red text-6xl sm:text-7xl md:text-8xl font-serif leading-none select-none block">"</span>
-              <p className="text-white text-base sm:text-xl md:text-2xl font-light leading-relaxed -mt-4 sm:-mt-6 mb-6 sm:mb-8">
-                What families are going through now, I've once had to go through that — and it's very difficult to find a way out. It's very important for me to help people who are struggling.
-              </p>
-              <div className="flex items-center gap-3 sm:gap-4 pt-4 border-t border-white/20">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-utd-red flex items-center justify-center text-white shrink-0">
-                  <span className={`${DISPLAY} text-base sm:text-lg`}>MR</span>
-                </div>
-                <div>
-                  <p className={`${DISPLAY} text-white text-sm sm:text-base`}>Marcus Rashford MBE</p>
-                  <p className="text-white/60 text-[10px] sm:text-xs uppercase tracking-widest mt-0.5">Foundation Ambassador</p>
-                </div>
-              </div>
-              <p className="text-white/50 text-xs mt-4 sm:mt-5 italic">
-                Your subscription directly funds the Foundation's community programmes.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* ─── Subscribe section ────────────────────────────────────────────── */}
-      <SubscribeSection />
-
       {/* ─── About / Foundation (dark image) ──────────────────────────────── */}
       <section
         id="about"
@@ -549,19 +533,23 @@ export default function Home() {
             <p className="text-utd-gold text-[10px] sm:text-[11px] uppercase tracking-[0.3em] mb-4">
               About the Foundation
             </p>
-            <h2 className={`${DISPLAY} text-white text-3xl sm:text-4xl md:text-5xl mb-2 leading-[0.95]`}>
-              More than<br />
+            <h2
+              className={`${DISPLAY} text-white text-3xl sm:text-4xl md:text-5xl mb-2 leading-[0.95]`}
+            >
+              More than
+              <br />
               <span className="text-utd-red">a prize draw</span>
             </h2>
             <div className="h-0.5 w-16 bg-utd-red mx-auto my-5 sm:my-6" />
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-4">
-              The Foundation uses the power of football to reach people and communities that many other programmes struggle to reach.
+              The Foundation uses the power of football to reach people and
+              communities that many other programmes struggle to reach.
             </p>
             <p className="text-white/70 text-sm leading-relaxed mb-8 sm:mb-10">
-              Its work focuses on Learning & Education, Health & Healthy Behaviours,
-              Safe Spaces & Places, and Movement & Activity. Your support helps fund
-              projects across Greater Manchester — Breakfast Clubs, mentoring,
-              and support for families and vulnerable people.
+              Its work focuses on Learning & Education, Health & Healthy
+              Behaviours, Safe Spaces & Places, and Movement & Activity. Your
+              support helps fund projects across Greater Manchester — Breakfast
+              Clubs, mentoring, and support for families and vulnerable people.
             </p>
             <Link
               to="/subscribe"
@@ -573,6 +561,50 @@ export default function Home() {
         </FadeIn>
       </section>
 
+      {/* ─── Rashford quote (dark image) ──────────────────────────────────── */}
+      <section className="relative overflow-hidden border-t-2 border-utd-red min-h-[380px] sm:min-h-[440px] md:min-h-[480px]">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/images/rashford.jpg)' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40 sm:to-transparent" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 flex items-center min-h-[380px] sm:min-h-[440px] md:min-h-[480px]">
+          <FadeIn direction="left">
+            <div className="max-w-xl">
+              <span className="text-utd-red text-6xl sm:text-7xl md:text-8xl font-serif leading-none select-none block">
+                "
+              </span>
+              <p className="text-white text-base sm:text-xl md:text-2xl font-light leading-relaxed -mt-4 sm:-mt-6 mb-6 sm:mb-8">
+                What families are going through now, I've once had to go through
+                that — and it's very difficult to find a way out. It's very
+                important for me to help people who are struggling.
+              </p>
+              <div className="flex items-center gap-3 sm:gap-4 pt-4 border-t border-white/20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-utd-red flex items-center justify-center text-white shrink-0">
+                  <span className={`${DISPLAY} text-base sm:text-lg`}>MR</span>
+                </div>
+                <div>
+                  <p className={`${DISPLAY} text-white text-sm sm:text-base`}>
+                    Marcus Rashford MBE
+                  </p>
+                  <p className="text-white/60 text-[10px] sm:text-xs uppercase tracking-widest mt-0.5">
+                    Foundation Ambassador
+                  </p>
+                </div>
+              </div>
+              <p className="text-white/50 text-xs mt-4 sm:mt-5 italic">
+                Your subscription directly funds the Foundation's community
+                programmes.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ─── Subscribe section ────────────────────────────────────────────── */}
+      <SubscribeSection />
+
       {/* ─── Stats (LIGHT GREY) ───────────────────────────────────────────── */}
       <StatsSection />
 
@@ -580,12 +612,17 @@ export default function Home() {
       <section className="bg-white border-t-4 border-utd-red py-12 sm:py-14 md:py-16 px-4">
         <FadeIn>
           <div className="max-w-xl mx-auto text-center">
-            <p className="text-utd-red text-[10px] sm:text-[11px] uppercase tracking-[0.3em] mb-3 font-semibold">Stay in the loop</p>
-            <h3 className={`${DISPLAY} text-gray-900 text-2xl sm:text-3xl md:text-4xl leading-none mb-4`}>
+            <p className="text-utd-red text-[10px] sm:text-[11px] uppercase tracking-[0.3em] mb-3 font-semibold">
+              Stay in the loop
+            </p>
+            <h3
+              className={`${DISPLAY} text-gray-900 text-2xl sm:text-3xl md:text-4xl leading-none mb-4`}
+            >
               Be first to <span className="text-utd-red">hear</span>
             </h3>
             <p className="text-gray-600 text-sm mb-6 sm:mb-8">
-              Drop your email below and we'll notify you before each draw goes live.
+              Drop your email below and we'll notify you before each draw goes
+              live.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 max-w-md mx-auto">
               <input
@@ -593,14 +630,15 @@ export default function Home() {
                 placeholder="your@email.com"
                 className="flex-1 bg-white border border-gray-300 px-5 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-utd-red transition-colors"
               />
-              <button className={`${DISPLAY} w-full sm:w-auto bg-utd-red hover:bg-[#A8201A] text-white text-sm tracking-widest px-7 py-3.5 sm:py-0 transition-colors`}>
+              <button
+                className={`${DISPLAY} w-full sm:w-auto bg-utd-red hover:bg-[#A8201A] text-white text-sm tracking-widest px-7 py-3.5 sm:py-0 transition-colors`}
+              >
                 Register
               </button>
             </div>
           </div>
         </FadeIn>
       </section>
-
     </div>
-  )
+  );
 }
