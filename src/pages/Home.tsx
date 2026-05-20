@@ -37,7 +37,7 @@ interface TimeLeft {
 
 const prizes: Prize[] = [
   { id: 1, tag: 'Signed Shirt',  title: 'Rashford Signed Shirt',         description: 'Win a 2025/26 home shirt personally signed by Marcus Rashford.', image: '/images/rashford.jpg' },
-  { id: 2, tag: 'Signed Shirt',  title: 'Bruno Fernandes Signed Shirt',  description: 'Win a 2025/26 home shirt personally signed by Bruno Fernandes.',  image: '/images/prize-bruno.jpg' },
+  { id: 2, tag: 'Signed Shirt',  title: 'Fernandes Signed Shirt',  description: 'Win a 2025/26 home shirt personally signed by Bruno Fernandes.',  image: '/images/prize-bruno.jpg' },
   { id: 3, tag: 'Signed Shirt',  title: 'Højlund Signed Shirt',          description: 'Win a 2025/26 home shirt personally signed by Rasmus Højlund.',  image: '/images/prize-hojlund.jpg' },
   { id: 4, tag: 'Squad Signed',  title: 'Full Squad Signed Shirt',       description: 'Win an iconic 2025/26 home shirt signed by the entire first team.', image: '/images/prize-squad.jpg' },
 ]
@@ -320,13 +320,13 @@ function SubscribeSection() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Promo video */}
+       {/* Promo video */}
         <div className="mt-8 sm:mt-12 overflow-hidden border border-gray-200 shadow-sm">
           <video className="w-full" controls poster="/images/hero-bg.jpg">
             <source src="/video/promo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
+</div>
       </div>
     </section>
   )
@@ -375,13 +375,13 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         <ParticleBackground />
 
         <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-utd-red hidden md:block" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 w-full py-16 sm:py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px- sm:px-6 md:px-10 w-full py-16 px-24 sm:py-20">
           <div className="max-w-2xl">
             <FadeIn delay={0.1}>
               <p className="text-utd-gold text-[10px] sm:text-[11px] uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-5 flex items-center gap-3">
