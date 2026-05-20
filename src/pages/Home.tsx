@@ -43,8 +43,8 @@ const prizes: Prize[] = [
 ]
 
 const slides = [
-  { image: '/images/hero-bg.jpg',     caption: 'Win a signed shirt.' },
-  { image: '/images/united-squad.jpg', caption: 'Hospitality tickets for a matchday.' },
+  { image: '/images/GirlsDevelopement.webp',     caption: 'Win a signed shirt.' },
+  { image: '/images/Partner-Schools.webp', caption: 'Hospitality tickets for a matchday.' },
   { image: '/images/team-bg.jpg',     caption: 'Support the Foundation.' },
 ]
 
