@@ -36,33 +36,33 @@ interface TimeLeft {
 }
 
 const prizes: Prize[] = [
-  { id: 1, tag: 'Signed Shirt',  title: 'Rashford Signed Shirt',         description: 'Win a 2025/26 home shirt personally signed by Marcus Rashford.', image: '/images/rashford.jpg' },
-  { id: 2, tag: 'Signed Shirt',  title: 'Fernandes Signed Shirt',  description: 'Win a 2025/26 home shirt personally signed by Bruno Fernandes.',  image: '/images/prize-bruno.jpg' },
-  { id: 3, tag: 'Signed Shirt',  title: 'Højlund Signed Shirt',          description: 'Win a 2025/26 home shirt personally signed by Rasmus Højlund.',  image: '/images/prize-hojlund.jpg' },
-  { id: 4, tag: 'Squad Signed',  title: 'Full Squad Signed Shirt',       description: 'Win an iconic 2025/26 home shirt signed by the entire first team.', image: '/images/prize-squad.jpg' },
+  { id: 1, tag: 'Signed Shirt', title: 'Rashford Signed Shirt', description: 'Win a 2025/26 home shirt personally signed by Marcus Rashford.', image: '/images/rashford.jpg' },
+  { id: 2, tag: 'Signed Shirt', title: 'Fernandes Signed Shirt', description: 'Win a 2025/26 home shirt personally signed by Bruno Fernandes.', image: '/images/prize-bruno.jpg' },
+  { id: 3, tag: 'Signed Shirt', title: 'Højlund Signed Shirt', description: 'Win a 2025/26 home shirt personally signed by Rasmus Højlund.', image: '/images/prize-hojlund.jpg' },
+  { id: 4, tag: 'Squad Signed', title: 'Full Squad Signed Shirt', description: 'Win an iconic 2025/26 home shirt signed by the entire first team.', image: '/images/prize-squad.jpg' },
 ]
 
 const slides = [
-  { image: '/images/GirlsDevelopement.webp',     caption: 'Win a signed shirt.' },
+  { image: '/images/inclusion.webp', caption: 'Win a signed shirt.' },
   { image: '/images/Partner-Schools.webp', caption: 'Hospitality tickets for a matchday.' },
-  { image: '/images/team-bg.jpg',     caption: 'Support the Foundation.' },
+  { image: '/images/team-bg.jpg', caption: 'Support the Foundation.' },
 ]
 
 const subscribeTabs = ['Monthly Subscription', 'Season Pass', 'One-Off Tickets', 'Postal Entry'] as const
 type SubscribeTab = typeof subscribeTabs[number]
 
 const tabContent: Record<SubscribeTab, { price: string; desc: string }> = {
-  'Monthly Subscription': { price: 'From £5/month',     desc: 'Subscribe monthly and be entered into every draw automatically. Cancel any time.' },
-  'Season Pass':          { price: 'From £40/season',   desc: 'Secure your place for the whole season and get the best value per draw. Limited availability.' },
-  'One-Off Tickets':      { price: 'From £5 per ticket', desc: 'Purchase a single entry for the next draw without any ongoing commitment.' },
-  'Postal Entry':         { price: 'Free',              desc: 'Enter by post with no purchase necessary. Full details in our Terms & Conditions.' },
+  'Monthly Subscription': { price: 'From £5/month', desc: 'Subscribe monthly and be entered into every draw automatically. Cancel any time.' },
+  'Season Pass': { price: 'From £40/season', desc: 'Secure your place for the whole season and get the best value per draw. Limited availability.' },
+  'One-Off Tickets': { price: 'From £5 per ticket', desc: 'Purchase a single entry for the next draw without any ongoing commitment.' },
+  'Postal Entry': { price: 'Free', desc: 'Enter by post with no purchase necessary. Full details in our Terms & Conditions.' },
 }
 
 const stats = [
-  { value: 2400,  suffix: '+', prefix: '',  label: 'Winners to date' },
-  { value: 50000, suffix: '',  prefix: '£', label: 'Raised for the Foundation' },
-  { value: 12,    suffix: '',  prefix: '',  label: 'Draws every year' },
-  { value: 98,    suffix: '%', prefix: '',  label: 'Positive feedback' },
+  { value: 2400, suffix: '+', prefix: '', label: 'Winners to date' },
+  { value: 50000, suffix: '', prefix: '£', label: 'Raised for the Foundation' },
+  { value: 12, suffix: '', prefix: '', label: 'Draws every year' },
+  { value: 98, suffix: '%', prefix: '', label: 'Positive feedback' },
 ]
 
 // ── Hooks ────────────────────────────────────────────────────────────────────
@@ -71,8 +71,8 @@ function useCountdown(target: Date): TimeLeft {
   const calc = (): TimeLeft => {
     const diff = Math.max(0, target.getTime() - Date.now())
     return {
-      days:    Math.floor(diff / 86400000),
-      hours:   Math.floor((diff % 86400000) / 3600000),
+      days: Math.floor(diff / 86400000),
+      hours: Math.floor((diff % 86400000) / 3600000),
       minutes: Math.floor((diff % 3600000) / 60000),
       seconds: Math.floor((diff % 60000) / 1000),
     }
@@ -207,7 +207,7 @@ function ImageSlider() {
           className="absolute inset-0"
         >
           <img src={slides[current].image} alt={slides[current].caption} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-white/50 via-black/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 md:p-10 max-w-7xl mx-auto">
             <div className="h-0.5 w-10 sm:w-12 bg-utd-red mb-3 sm:mb-4" />
             <h2 className={`${DISPLAY} text-white text-2xl sm:text-3xl md:text-5xl leading-none max-w-lg`}>
@@ -248,7 +248,7 @@ function MarqueeStrip() {
   const text = 'PRIZE DRAW · WIN BIG · GIVE BIGGER · SUPPORT THE FOUNDATION · '
   const repeated = text.repeat(6)
   return (
-    <div className="bg-utd-gold overflow-hidden py-3 sm:py-3.5 select-none">
+    <div className="bg-white overflow-hidden py-3 sm:py-3.5 select-none">
       <motion.p
         className={`${DISPLAY} text-black text-xs sm:text-sm tracking-[0.25em] whitespace-nowrap`}
         animate={{ x: [0, '-50%'] }}
@@ -287,11 +287,10 @@ function SubscribeSection() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`${DISPLAY} shrink-0 whitespace-nowrap px-4 sm:px-5 py-3 text-xs tracking-widest border-b-2 transition-colors -mb-px ${
-                activeTab === tab
+              className={`${DISPLAY} shrink-0 whitespace-nowrap px-4 sm:px-5 py-3 text-xs tracking-widest border-b-2 transition-colors -mb-px ${activeTab === tab
                   ? 'border-utd-red text-gray-900'
                   : 'border-transparent text-gray-400 hover:text-gray-700'
-              }`}
+                }`}
             >
               {tab}
             </button>
@@ -320,13 +319,13 @@ function SubscribeSection() {
           </motion.div>
         </AnimatePresence>
 
-       {/* Promo video */}
+        {/* Promo video */}
         <div className="mt-8 sm:mt-12 overflow-hidden border border-gray-200 shadow-sm">
           <video className="w-full" controls poster="/images/hero-bg.jpg">
             <source src="/video/promo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-</div>
+        </div>
       </div>
     </section>
   )
@@ -375,7 +374,7 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-black/30 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         <ParticleBackground />
 
@@ -410,8 +409,8 @@ export default function Home() {
             <FadeIn delay={0.2}>
               <p className="text-white/60 text-[10px] uppercase tracking-[0.3em] mb-3">Next draw closes in</p>
               <div className="flex gap-2 sm:gap-3 md:gap-5 mb-8 sm:mb-10 max-w-md">
-                <CountdownBlock value={timeLeft.days}    label="Days" />
-                <CountdownBlock value={timeLeft.hours}   label="Hours" />
+                <CountdownBlock value={timeLeft.days} label="Days" />
+                <CountdownBlock value={timeLeft.hours} label="Hours" />
                 <CountdownBlock value={timeLeft.minutes} label="Mins" />
                 <CountdownBlock value={timeLeft.seconds} label="Secs" />
               </div>
