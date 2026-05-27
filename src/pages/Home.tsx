@@ -601,7 +601,7 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
-
+ 
       {/* ─── Subscribe section ────────────────────────────────────────────── */}
       <SubscribeSection />
 
